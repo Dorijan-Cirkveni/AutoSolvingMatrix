@@ -12,3 +12,5 @@ class AutoSolvingMatrix:
             e: (int, VectorAbstract)
             newVector.SolveWith(e)
         index = newVector.ConvertToCanon()
+        self.values =
+        return
