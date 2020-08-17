@@ -1,6 +1,10 @@
 class VectorAbstract:
-    def SolveWith(self,other):
-        other:VectorAbstract
+    def FindSolvables(self, potentials):
         raise NotImplementedError
+
+    def SolveWith(self, other):
+        other: (int,VectorAbstract)
+        raise NotImplementedError
+
     def ConvertToCanon(self):
         raise NotImplementedError
