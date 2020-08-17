@@ -43,5 +43,5 @@ class DictionaryVector(VectorAbstract):
 if __name__ == "__main__":
     A = DictionaryVector({3: 2})
     B = DictionaryVector({1:2, 2: 2, 3: 2})
-    s = B.SolveWith((1,A))
+    B.SolveWith((1,A))
     print("Done!")
