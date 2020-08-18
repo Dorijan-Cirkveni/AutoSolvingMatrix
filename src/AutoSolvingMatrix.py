@@ -20,6 +20,9 @@ class AutoSolvingMatrix:
         for i in range(self.size):
             newVector.SolveWith((self.keys[i], self.values[i]))
         index = newVector.ConvertToCanon()
+        for e in self.values:
+            e:VectorAbstract
+            e.SolveWith((index,newVector))
         insertion = bisect(self.keys, index)
         self.keys.insert(insertion, index)
         self.values.insert(insertion, newVector)
