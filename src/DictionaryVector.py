@@ -12,6 +12,12 @@ class DictionaryVector(VectorAbstract):
                 self.values[e] = v
         return
 
+    def __repr__(self):
+        return self.values
+
+    def __str__(self):
+        return str(self.values)
+
     def FindSolvables(self, potentials):
         potentials: set
         return potentials.intersection(set(self.values.keys()))
@@ -33,6 +39,9 @@ class DictionaryVector(VectorAbstract):
         return
 
     def ConvertToCanon(self):
+        if len(self.values)==0:
+            print("Colinearity found!")
+            return None
         minvalue = min(self.values.keys())
         factor = self.values.pop(minvalue)
         for e in self.values:
